@@ -31,3 +31,10 @@ def ola_mundo():
 @app.get("/produtos/")
 def listar_produtos():
     return produtos
+
+@app.get("/produtos/{id}")
+def buscar_produto(id:int):
+    for produto in produtos:
+        if produto.get("id") == id:
+            return produto
+    return {"Status": 401, "Mensagem":"Produto nao encontrado"}
