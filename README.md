@@ -81,7 +81,7 @@ poetry init
 # Ativando nosso ambiente virtual
 
 ```bash
-portey shell
+poetry shell
 ```
 
 ```bash
